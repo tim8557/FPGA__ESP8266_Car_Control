@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> 
+    <!-- 萬國碼 -->
+	<title>Motot Control</title>
+  <style>
+    .mid {
+      vertical-align: middle;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+<center>
+<h1>Motot Control</h1>
+<table class="mid"  cellsapcing="0"  align="center" >
+
+<tr>
+  <!-- 加速控制 -->
+<td td width="100px"></td>
+<td colspan="3">
+<div id="demo">
+ <br>
+  <img src="images/up_arrow.jpg" height="100"/><br>
+  <button type="button" onclick="inc_motor()">Motor accleration</button>
+</div>
+</td>
+<td></td>
+<tr>
+
+<tr>
+<td width="100">
+  <div id="demo">
+    <h3>
+      D/R
+    </h3>
+    <p>
+    <button type="button" onclick="forward_motor()">Drive</button>
+   </p>
+   <p>
+    <button type="button" onclick="back_motor()">Reverse</button>
+   </p>
+</div>
+</td>
+<td>
+  <!-- 左轉控制 -->
+  <div>
+    <p>
+    <img src="images/arrow_left.jpg" height="100"><br>
+    <button type="button" onclick="left_motor()">Left</button><br>
+    <!-- onclick之後要加上函數，說明按下案件之後的動作 -->
+    </p>
+  </div>
+</td>
+<td>
+  <!-- 煞車控制 -->
+  <img src="images/car_pedals.jpg" height="100"/><br>
+  <button type="button" onclick="break_motor()">Brake</button>
+</td>
+
+<td>
+<!-- 右轉控制 -->
+<div>
+  <p>
+  <img src="images/right_arrow.jpg" height="100"><br>
+  <button type="button" onclick="right_motor()">Right</button><br>
+  <!-- onclick之後要加上函數，說明按下案件之後的動作 -->
+  </p>
+</div>
+</td>
+<td></td>
+</tr>
+
+<tr>
+  <td></td>
+  <td></td>
+  <td>
+    <!-- 減速控制 -->
+    <div>
+      <p>
+      <img src="images/down_arrow.jpg" height="100"><br>
+      <button type="button" onclick="dec_motor()">Motor deceleration</button><br>
+      <!-- onclick之後要加上函數，說明按下案件之後的動作 -->
+      </p>
+    </div>
+  </td>
+  <td></td>
+  <td></td>
+</tr>
+
+</table>
+
+<div>
+    Status : <span id="Motor_Speed">NA</span><br>
+</div>
+<br><br>
+<div id="demo">
+
+<script>
+function inc_motor() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("Motor_Speed").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "acclerate", true);
+  xhttp.send();
+}
+
+function dec_motor() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("Motor_Speed").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "decelerate", true);
+  xhttp.send();
+}
+
+function break_motor() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("Motor_Speed").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "stop", true);
+  xhttp.send();
+}
+
+function left_motor() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("Motor_Speed").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "left", true);
+  xhttp.send();
+}
+
+function right_motor() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("Motor_Speed").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "right", true);
+  xhttp.send();
+}
+
+function forward_motor() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("Motor_Speed").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "forward", true);
+  xhttp.send();
+}
+
+function back_motor() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("Motor_Speed").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "back", true);
+  xhttp.send();
+}
+
+setInterval(function() {
+  // Call a function repetatively with 2 Second interval
+  getData();
+}, 2000); //2000mSeconds update rate
+ 
+function getData() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("ADCValue").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "readADC", true);
+  xhttp.send();
+}
+</script>
+</center>
+</body>
+</html>
