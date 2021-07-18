@@ -15,4 +15,4 @@ Here is the web page that we use to control the electic car.<br>
 The pictire is the input signal to FPGA and the output signal from FPGA. We used the duty cycle to contol <br>
 the rotation speed of motor. 
 
-![image](https://github.com/tim8557/ADC--MCP3008--FPGA/blob/main/images/communication_with_m3008_v2.JPG)
+![image](https://github.com/tim8557/FPGA__ESP8266__Car__Control/blob/main/images/time_sequence_state.JPG)
