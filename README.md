@@ -15,8 +15,16 @@ Here is the web page that we use to control the electic car.<br>
 The pictire is the time sequence and state machine of FPGA. The sync_d0, sync_d1 and sync_d2<br>
 are the signals from ESP8266. We use this three signals to make the motor action. For example, if the control<br>
 signal is 3'b001, the motor will be acclerated. There are seven states in our project.<br>
+<br>
+**clk:** clock frequency of FPGA<br>
+**rst:** reset signal<br>
+**d0_sync:** the signal from ESP8226 to the syncornizer<br>
+**d1_sync:** the signal from ESP8226 to the syncornizer<br>
+**d2_sync:** the signal from ESP8226 to the syncornizer<br>
+**state:** the state was used to control the action of motor.<br>
+**pwm:** we used the duty cycle to control rotational speed of motor.<br>
+**pwm2:** make the motor work at different rotational speed for turnig left or right.<br>
 
-the rotation speed of motor. 
 
 ![image](https://github.com/tim8557/FPGA__ESP8266__Car__Control/blob/main/images/time_sequence.JPG)
 
