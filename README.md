@@ -24,9 +24,24 @@ signal is 3'b001, the motor will be acclerated. There are seven states in our pr
 **state:** the state was used to control the action of motor.<br>
 **pwm:** we used the duty cycle to control rotational speed of motor.<br>
 **pwm2:** make the motor work at different rotational speed for turnig left or right.<br>
+<br>
 ![image](https://github.com/tim8557/FPGA__ESP8266__Car__Control/blob/main/images/time_sequence.JPG)
 <br>
-We used L293D to control the direction of rotation.
+We used L293D to control the direction of rotation.<br>
+<br>
+<img src="https://github.com/tim8557/FPGA__ESP8266__Car__Control/blob/main/images/l293d.jpg" width="100" ><br>
 
-
-https://www.youtube.com/watch?v=zgS9nRPCUMc
+## Result
+The seven-seg display can show the distance between the car and obstacle.<br>
+<br>
+<img src="https://github.com/tim8557/FPGA__ESP8266__Car__Control/blob/main/images/result_car_control.jpg" width="300" ><br>
+<br>
+### First demo vedio
+In this vedio, the car can stop when the distance is smaller than 25 cm between car and obstacle.<br> 
+https://www.youtube.com/watch?v=zgS9nRPCUMc<br>
+<br>
+### Second demo vedio
+In this vedio, the led light become green when the direction of rotation is forward. The light become <br> 
+red when the direction of rotation is reverse. The color of light can mention us the direction of rotation<br>
+when we stop the car.<br>
+https://www.youtube.com/watch?v=whfVSmhwwZ0
