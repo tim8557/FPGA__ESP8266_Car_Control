@@ -36,6 +36,12 @@ The seven-seg display can show the distance between the car and obstacle.<br>
 <br>
 <img src="https://github.com/tim8557/FPGA__ESP8266__Car__Control/blob/main/images/result_car_control.jpg" width="300" ><br>
 <br>
-In the vedio, the car can stop when the distance is smaller than 25 cm between car and obstacle.<br> 
+### First demo vedio
+In this vedio, the car can stop when the distance is smaller than 25 cm between car and obstacle.<br> 
 https://www.youtube.com/watch?v=zgS9nRPCUMc<br>
 <br>
+### Second demo vedio
+In this vedio, the led light become green when the direction of rotation is forward. The light become <br> 
+red when the direction of rotation is reverse. The color of light can mention us the direction of rotation<br>
+when we stop the car.<br>
+https://www.youtube.com/watch?v=whfVSmhwwZ0
