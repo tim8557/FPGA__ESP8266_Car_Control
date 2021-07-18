@@ -24,9 +24,13 @@ signal is 3'b001, the motor will be acclerated. There are seven states in our pr
 **state:** the state was used to control the action of motor.<br>
 **pwm:** we used the duty cycle to control rotational speed of motor.<br>
 **pwm2:** make the motor work at different rotational speed for turnig left or right.<br>
+<br>
 ![image](https://github.com/tim8557/FPGA__ESP8266__Car__Control/blob/main/images/time_sequence.JPG)
 <br>
-We used L293D to control the direction of rotation.
+We used L293D to control the direction of rotation.<br>
+<br>
+<img src="https://github.com/tim8557/FPGA__ESP8266__Car__Control/blob/main/images/l293d.jpg" width="100" ><br>
 
+## Result
 
 https://www.youtube.com/watch?v=zgS9nRPCUMc
