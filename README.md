@@ -12,7 +12,11 @@ Here is the web page that we use to control the electic car.<br>
 ![image](https://github.com/tim8557/FPGA__ESP8266__Car__Control/blob/main/images/wifi_control_interface.JPG)<br>
 
 ## Use FPGA to control the motor
-The pictire is the input signal to FPGA and the output signal from FPGA. We used the duty cycle to contol <br>
+The pictire is the time sequence and state machine of FPGA. The sync_d0, sync_d1 and sync_d2<br>
+are the signals from ESP8266. We use this three signal to make the motor action. For example, if the control<br>
+signal is 3'b001, the motor will be acclerate. There are seven states in our project.<br>
+
 the rotation speed of motor. 
 
-![image](https://github.com/tim8557/FPGA__ESP8266__Car__Control/blob/main/images/time_sequence_state.JPG)
+![image](https://github.com/tim8557/FPGA__ESP8266__Car__Control/blob/main/images/time_sequence.JPG)
+
