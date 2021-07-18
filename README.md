@@ -29,4 +29,4 @@ signal is 3'b001, the motor will be acclerated. There are seven states in our pr
 We used L293D to control the direction of rotation.
 
 
-https://www.youtube.com/channel/UCtomyx7lqDV1XevCqkg9PJQ
+https://www.youtube.com/watch?v=zgS9nRPCUMc
