@@ -1,8 +1,8 @@
 # FPGA__ESP8266__Car__Control
 We used FPGA to control the action of motor and used the ESP8266 NodeMCU to send the control signal from web page.
 <br>
-## WIFI control module
-We used the ESP8266 NodeMUC wifi module and contructed the control interface with HTML code<br>
+## WiFi control module
+We used the ESP8266 NodeMUC WiFi module and contructed the control interface with HTML code<br>
 to control the electric car.<br>
 <img src="https://github.com/tim8557/FPGA__ESP8266__Car__Control/blob/main/images/esp8266_nodemcu.jpg" width="200" ><br>
 
